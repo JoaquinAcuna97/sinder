@@ -1,8 +1,8 @@
 // src/components/ProfileCarousel.jsx
 import React, { useState } from 'react';
-import ProfileCard from './ProfileCard'; // Import the new ProfileCard
+import ProfileCard from './ProfileCard'; // Import ProfileCard
 
-// Hardcoded Array of Profiles (will come from backend later)
+// Hardcoded Array of Profiles (unchanged)
 const profilesData = [
   {
     id: 1,
@@ -36,18 +36,34 @@ const profilesData = [
 
 export default function ProfileCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [swipeDirection, setSwipeDirection] = useState(null); // 'left' or 'right'
+  const [isAnimating, setIsAnimating] = useState(false);
 
   const currentProfile = profilesData[currentIndex];
+  const animationDuration = 500; // milliseconds, should match CSS transition duration
 
-  const handleNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % profilesData.length);
+  const triggerSwipe = (direction) => {
+    if (isAnimating) return; // Prevent multiple swipes during animation
+
+    setIsAnimating(true);
+    setSwipeDirection(direction);
+
+    // After the animation duration, update the index and reset animation state
+    setTimeout(() => {
+      if (direction === 'left') {
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % profilesData.length);
+      } else { // direction === 'right'
+        setCurrentIndex((prevIndex) =>
+          (prevIndex - 1 + profilesData.length) % profilesData.length
+        );
+      }
+      setSwipeDirection(null); // Reset swipe direction
+      setIsAnimating(false);
+    }, animationDuration);
   };
 
-  const handlePrevious = () => {
-    setCurrentIndex((prevIndex) =>
-      (prevIndex - 1 + profilesData.length) % profilesData.length
-    );
-  };
+  const handleNext = () => triggerSwipe('left'); // Swiping left for next profile
+  const handlePrevious = () => triggerSwipe('right'); // Swiping right for previous profile
 
   if (profilesData.length === 0) {
     return <div className="text-lg text-gray-500 dark:text-gray-400">No profiles to show.</div>;
@@ -56,25 +72,26 @@ export default function ProfileCarousel() {
   return (
     <div className="flex flex-col items-center justify-center">
       <div className="relative">
-        <ProfileCard profile={currentProfile} />
+        <ProfileCard profile={currentProfile} swipeDirection={swipeDirection} />
 
-        {/* Navigation Buttons (Basic, you can style these better) */}
+        {/* Navigation Buttons */}
         <button
           onClick={handlePrevious}
-          className="absolute left-2 top-1/4 -translate-y-1/4 bg-gray-700/50 hover:bg-gray-700/80 text-white p-2 rounded-full z-10"
+          className="absolute left-2 top-1/2 -translate-y-1/2 bg-gray-700/50 hover:bg-gray-700/80 text-white p-2 rounded-full z-10"
           aria-label="Previous Profile"
+          disabled={isAnimating} // Disable buttons during animation
         >
           &lt;
         </button>
         <button
           onClick={handleNext}
-          className="absolute right-2 top-1/4 -translate-y-1/4 bg-gray-700/50 hover:bg-gray-700/80 text-white p-2 rounded-full z-10"
+          className="absolute right-2 top-1/2 -translate-y-1/2 bg-gray-700/50 hover:bg-gray-700/80 text-white p-2 rounded-full z-10"
           aria-label="Next Profile"
+          disabled={isAnimating} // Disable buttons during animation
         >
           &gt;
         </button>
       </div>
-      {/* You can add swipe gestures later */}
     </div>
   );
 }
