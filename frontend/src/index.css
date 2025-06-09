@@ -67,3 +67,7 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+@theme {  
+  --color-mint-500: oklch(0.72 0.11 178);
+}
