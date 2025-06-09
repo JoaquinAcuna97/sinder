@@ -61,14 +61,14 @@ export default function ProfileCarousel() {
         {/* Navigation Buttons (Basic, you can style these better) */}
         <button
           onClick={handlePrevious}
-          className="absolute left-2 top-1/2 -translate-y-1/2 bg-gray-700/50 hover:bg-gray-700/80 text-white p-2 rounded-full z-10"
+          className="absolute left-2 top-1/4 -translate-y-1/4 bg-gray-700/50 hover:bg-gray-700/80 text-white p-2 rounded-full z-10"
           aria-label="Previous Profile"
         >
           &lt;
         </button>
         <button
           onClick={handleNext}
-          className="absolute right-2 top-1/2 -translate-y-1/2 bg-gray-700/50 hover:bg-gray-700/80 text-white p-2 rounded-full z-10"
+          className="absolute right-2 top-1/4 -translate-y-1/4 bg-gray-700/50 hover:bg-gray-700/80 text-white p-2 rounded-full z-10"
           aria-label="Next Profile"
         >
           &gt;

@@ -48,7 +48,7 @@ function App() {
           <ProfileCarousel /> {/* Render the Carousel instead of a single profile */}
           <button
             onClick={handleLogout}
-            className="mt-8 bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded"
+            className="mt-8 bg-rose-400 hover:bg-rose-400 text-white font-semibold py-2 px-4 rounded"
           >
             Cerrar Sesión
           </button>
