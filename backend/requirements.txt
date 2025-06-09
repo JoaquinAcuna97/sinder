@@ -1,0 +1,9 @@
+fastapi
+uvicorn[standard]
+httpx
+pytest
+motor
+pydantic
+pydantic[email]
+passlib[bcrypt]
+pytest-asyncio

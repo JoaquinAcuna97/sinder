@@ -1,0 +1,42 @@
+version: "3.10"
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app
+    depends_on:
+      - mongo
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/db
+    restart: always
+  
+  mongo:
+    image: mongo:6
+    container_name: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+  frontend:
+    build: ./frontend
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    ports:
+      - "5173:5173"  # Puerto del servidor Vite
+    restart: always
+  backend_test:
+    build: ./backend
+    command: ["pytest", "tests"]
+    volumes:
+      - ./backend/:/app
+    environment:
+      - PYTHONPATH=/app
+    depends_on:
+      - backend
+      - mongo
+volumes:
+  mongo_data:
