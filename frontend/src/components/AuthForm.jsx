@@ -22,8 +22,10 @@ export default function AuthForm({ title, fields, onSubmit, toggleText, onToggle
   };
 
   return (
-    <div className="max-w-md mx-auto mt-20 p-6 bg-white rounded shadow">
-      <h2 className="text-2xl font-bold mb-6 text-center">{title}</h2>
+    <div className="max-w-md mx-auto p-6 bg-white rounded shadow-lg dark:bg-gray-800">
+      <h2 className="text-2xl font-bold mb-6 text-center text-black dark:text-white">
+        {title}
+      </h2>
       <form onSubmit={handleSubmit} className="space-y-4">
         {fields.map(({ label, name, type, autoComplete }) => (
           <input
@@ -34,23 +36,23 @@ export default function AuthForm({ title, fields, onSubmit, toggleText, onToggle
             value={form[name]}
             onChange={handleChange}
             autoComplete={autoComplete}
-            className="w-full border px-3 py-2 rounded"
+            className="w-full border border-gray-300 px-3 py-2 rounded text-gray-900 dark:border-gray-600 dark:bg-gray-700 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
           />
         ))}
         <button
           type="submit"
-            className="bg-blue-500 hover:bg-blue-600 py-2 px-4 rounded cursor-pointer transition-colors duration-300 !bg-blue-500"
+          className="w-full bg-blue-500 hover:bg-blue-600 py-2 px-4 rounded cursor-pointer transition-colors duration-300 text-white font-semibold"
         >
           {title}
         </button>
       </form>
       {message && (
-        <p className="mt-4 text-center text-gray-700">{message}</p>
+        <p className="mt-4 text-center text-gray-700 dark:text-gray-300">{message}</p>
       )}
-      <p className="mt-6 text-center text-sm">
+      <p className="mt-6 text-center text-sm text-gray-700 dark:text-gray-300">
         {toggleText}{" "}
         <button
-          className="text-blue-600 hover:underline"
+          className="text-blue-600 hover:underline dark:text-blue-400"
           onClick={onToggle}
         >
           {toggleText === "¿No tienes cuenta?" ? "Regístrate aquí" : "Inicia sesión aquí"}
