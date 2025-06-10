@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "imageUrl": "https://us1.ecdn2.badoocdn.com/p510/hidden?euri=AAAAAAAAAAIQVtdgJCtvXAX235aL29k3GQDU7iz6Lsw45hIYGGRmtcjBQYmld0gWtdC3RFuHpqYqY1liD8uTgptrzOmARh0JYqUcmHjn7b8Czj3xx13kfdqYcfO3j.RKy9ymRL9BlayYHwLKCvSDQ2UqHp6QDrj2DLTR4A8h8-rbyGzny6lpGt9W.73Ictk3MF1Td3e6oD1FgbDbEZ07k1C9Mx13Pw&size=1850y857&vp_x1=0&vp_x2=969&vp_y1=225&vp_y2=674&vp_scale=0.524&wm_left_offs=__wm_offset__&wm_size=__wm_size__&h=jrY&gs=j&t=5.6.2647.1",
+    "name": "Sarah",
+    "age": 26,
+    "description": "Enthusiastic traveler and aspiring chef. Always up for an adventure or a cozy night in. Love to laugh and explore new places!"
+  },
+  {
+    "id": 2,
+    "imageUrl": "https://us1.ecdn2.badoocdn.com/p519/hidden?euri=AAAAAAAAAAIQNxQcwxASynf9UwGQ0nNIsgBeorLPVLIwlBjNtFGOsHnu4u8xRC98.LeFKqf5iPMWCrDAwCu2.3Io-CFeZuqU10Jl-39xZ9yjAzKjg3Ryj6Itduazi7aQBl9Q1CAPvVt7WFumdKbbhRN7JIm.ceAxjaO.yhIdOkS3WNCOVrDydRvTqpKxr.kJzL74KWtozccqWtD4eKGBVx6AOsVnLQ&size=1850y857&vp_x1=0&vp_x2=969&vp_y1=224&vp_y2=673&vp_scale=0.524&wm_left_offs=__wm_offset__&wm_size=__wm_size__&h=Kp-&gs=j&t=5.6.2647.1",
+    "name": "Michael",
+    "age": 30,
+    "description": "Software engineer by day, amateur photographer by night. Looking for someone to share sunsets and bad jokes with. Dog lover!"
+  },
+  {
+    "id": 3,
+    "imageUrl": "https://us1.ecdn2.badoocdn.com/p519/hidden?euri=AAAAAAAAAAIQTpWU52I1cKkAnMVvZWnK7wCgB0tYUaMhsdur6AAWCEU0x.X1tMCiyp9eYKHoe7si9PhNZ8FBuSsjKZJPjXxs51Qk9NBJAaqjDFqLE2NOZeLonwOr7O8yMwFtQ03fQsdprgjEDCTNo7mGQ8K.CumkRI45YqQR3rc7-QEdNau4y9uDTJJxZoPi0NQcfqNT5nv6ngnCONCYsd49ah7bkw&size=1850y857&vp_x1=0&vp_x2=969&vp_y1=0&vp_y2=449&vp_scale=0.524&wm_left_offs=__wm_offset__&wm_size=__wm_size__&h=nQs&gs=j&t=5.6.2647.1",
+    "name": "Emily",
+    "age": 24,
+    "description": "Artist and cat enthusiast. My ideal date involves a quiet gallery, a good book, or a spontaneous road trip. Let's create something beautiful!"
+  },
+  {
+    "id": 4,
+    "imageUrl": "https://us1.ecdn2.badoocdn.com/p513/hidden?euri=AAAAAAAAAAIQ4BvP5NGS8yLWFF51JEaI.gC6LQARmrpN6B1mZgJnUnxUPJIjm4xlF9nf9jH7eKg28SPRm.gNdEgU15TEZB6Zb8Xx6h-RiXR6JDbmNSgz7cjEJaESL14t53nXwp7IrruNCAgZxgcubn43EdHSaeEgqahTpDQc8.AT685e9OwhuNwMx0z7Pk4gwxwQoASBbsXr9vuE6snjYw7BAiHVzA&size=857y1850&vp_x1=403&vp_x2=750&vp_y1=-53&vp_y2=696&vp_scale=0.405&wm_left_offs=__wm_offset__&wm_size=__wm_size__&h=msP&gs=j&t=5.6.2647.1",
+    "name": "David",
+    "age": 32,
+    "description": "Fitness junkie and foodie. I believe in living life to the fullest. Seeking a partner in crime for gym sessions and gastronomic adventures."
+  }
+]
